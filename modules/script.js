@@ -1,5 +1,7 @@
 // -------------------------------------------------------------------------------------------------------------
+// import de la page form
 
+import{} from "./form.js"
 // création de tableau
 
 let listeContact = [{
@@ -57,9 +59,9 @@ console.log(addContact({
 
 // test suppr utilisateur
 
-deleteContact({
-    nom: "Defiaa",
-    prenom: "Carla",
+deleteContact(listeContact, {
+    nom: "Clement",
+    prenom: "Jordan",
     phone: "0613947403"
-}, listeContact);
+});
 
