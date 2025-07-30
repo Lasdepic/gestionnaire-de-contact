@@ -1,35 +1,5 @@
 
-<<<<<<< HEAD
-export const nomLabel = document.createElement("label");
-nomLabel.textContent = "Nom";
-container.appendChild(nomLabel);
-export const nomInput = document.createElement("input");
-container.appendChild(nomInput);
-
-export const prenomLabel = document.createElement("label");
-prenomLabel.textContent = "Prénom";
-container.appendChild(prenomLabel);
-export const prenomInput = document.createElement("input");
-container.appendChild(prenomInput);
-
-export const numeroLabel = document.createElement("label");
-numeroLabel.textContent = "Numéro";
-container.appendChild(numeroLabel);
-export const numeroInput = document.createElement("input");
-container.appendChild(numeroInput);
-
-export const boutonValidation = document.createElement("button");
-boutonValidation.textContent = "Valider";
-container.appendChild(boutonValidation);
-
-export const boutonSuppression = document.createElement("button");
-boutonSuppression.textContent = "Supprimer";
-container.appendChild(boutonSuppression);
-
-
-=======
 import { addContactFromForm } from "./script.js";
-import { mainPage, usersCount } from "./app.js";
 export let nomInput, prenomInput, numeroInput, divFormCreateUser;
 
 export function addUserDiv() {
@@ -52,6 +22,7 @@ export function addUserDiv() {
 
   nomInput = document.createElement("input");
   divFormCreateUser.appendChild(nomInput);
+  nomInput.placeholder = "Entrez un nom";
 
   // Prénom
   const prenomLabel = document.createElement("label");
@@ -60,6 +31,7 @@ export function addUserDiv() {
 
   prenomInput = document.createElement("input");
   divFormCreateUser.appendChild(prenomInput);
+  prenomInput.placeholder = "Entrez un prenom";
 
   // Numéro
   const numeroLabel = document.createElement("label");
@@ -88,4 +60,3 @@ export function addUserDiv() {
   })
 }
 
->>>>>>> dev

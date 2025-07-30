@@ -9,9 +9,11 @@
 }
 
 body {
-  background-color: #333;
+  background-color: #0f091b;
   color: var(--mainColor);
   height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 body section {
@@ -31,12 +33,18 @@ body section .mainDiv {
 
 body section .mainDiv #actBtn {
   width: 35px;
-  height: 25px;
+  height: 35px;
+}
+
+body section .mainDiv #actBtn svg {
+  width: 30px;
+  height: 30px;
 }
 
 body section .mainDiv #contactCounter {
   bottom: 0;
   position: absolute;
+  margin-bottom: 0.5rem;
 }
 
 body section .mainDiv button {
@@ -59,11 +67,11 @@ body section #addUserBtn {
 body section .mainDiv section {
   width: 90%;
   height: 50%;
-  background-color: #474747c0;
+  background-color: #2525255f;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0.5rem;
+  padding-top: 0.8rem;
   gap: 0.5rem;
   border-radius: 15px;
   margin-bottom: 1rem;
@@ -72,12 +80,21 @@ body section .mainDiv section {
 }
 
 body section .mainDiv section .divCard {
-  background-color: rgba(42, 42, 42, 0.667);
+  background-color: rgba(23, 23, 23, 0.412);
   width: 95%;
   border-radius: 15px;
   border: solid var(--mainColor) 2px;
   display: flex;
   justify-content: space-between;
+}
+
+body section .mainDiv section .divCard div {
+  display: flex;
+}
+
+body section .mainDiv section .divCard div img {
+  align-self: center;
+  margin-left: 1rem;
 }
 
 body section .mainDiv section .divCard p {
@@ -105,7 +122,6 @@ body h2 {
 
 .divFormCreateUser {
   padding: 20px;
-  margin: 50px;
   width: 80%;
   display: flex;
   margin: 0 auto;
@@ -115,10 +131,23 @@ body h2 {
   border-radius: 15px;
   position: absolute;
   top: 15vh;
-  margin-left: 3%;
-  margin-right: 3%;
+  align-self: center;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: AnimUp 0.3s ease-out;
+  max-width: 400px;
 }
 
+@keyframes AnimUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
 .divFormCreateUser #exitBtn {
   background-color: transparent;
   width: 35px;
@@ -170,6 +199,9 @@ body h2 {
   height: 5rem;
   gap: 0.5rem;
 }
+#divContactText p {
+  font-size: 16px;
+}
 
 #actBtn {
   margin-top: 5vh;
@@ -177,4 +209,22 @@ body h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.spin {
+  animation: spinOnce 0.6s ease-in-out;
+}
+
+@keyframes spinOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ppImg {
+  width: 50px;
+  height: 50px;
 }
