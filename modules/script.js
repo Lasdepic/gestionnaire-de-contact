@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------------------------------------------------
 // import de la page form
-
+ import {usersCount} from "./app.js"
 
 import {
   nomInput,
@@ -12,9 +12,19 @@ import {
 
 export let listeContact = [
   {
-    nom: "nom",
-    prenom: "prenom",
-    phone: 54325435,
+    nom: "Deafiaa",
+    prenom: "Carla",
+    phone: 90291,
+  },
+  {
+    nom: "Clément",
+    prenom: "Jordan",
+    phone: 34070,
+  },
+  {
+    nom: "Bali",
+    prenom: "Eszter",
+    phone: 34000,
   },
 ];
 
@@ -22,13 +32,13 @@ export let listeContact = [
 
 // // Ajout des contact
 
-export function addContact(contact, userArray) {
+  function addContact(contact, userArray) {
     userArray.push(contact);
     return userArray;
 }
 
-
 // créattion des contact à partir des inputs
+
 export function createContactFromInputs() {
   const nom = nomInput.value.trim();
   const prenom = prenomInput.value.trim();
@@ -50,7 +60,6 @@ export function clearInputs() {
 
 // ajout contact depuis le form
 export function addContactFromForm() {
-
   const newContact = createContactFromInputs();
   if (newContact) {
     addContact(newContact, listeContact);
@@ -67,14 +76,13 @@ export function deleteContactFromForm() {
   if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
     deleteContact(listeContact, contactToDelete);
     clearInputs();
+    usersCount--;
     console.log("Contact supprimé:", contactToDelete);
     console.log("Liste actuelle:", listeContact);
   } else {
     console.log("Veuillez remplir tous les champs pour supprimer un contact");
   }
 }
-
-// -------------------------------------------------------------------------------------------------------------
 
 // Supprimer des contacts
 
@@ -92,5 +100,7 @@ export function deleteContact(userArray, contact) {
   }
   return userArray;
 }
+
 // -------------------------------------------------------------------------------------------------------------
+
 
