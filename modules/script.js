@@ -12,9 +12,19 @@ import {
 
 export let listeContact = [
   {
-    nom: "nom",
-    prenom: "prenom",
-    phone: 54325435,
+    nom: "Deafiaa",
+    prenom: "Carla",
+    phone: 90291,
+  },
+  {
+    nom: "Clément",
+    prenom: "Jordan",
+    phone: 34070,
+  },
+  {
+    nom: "Bali",
+    prenom: "Eszter",
+    phone: 34000,
   },
 ];
 
