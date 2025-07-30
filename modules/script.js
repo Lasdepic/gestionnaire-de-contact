@@ -1,6 +1,21 @@
 // -------------------------------------------------------------------------------------------------------------
 // import de la page form
 
+<<<<<<< HEAD
+import { nomLabel, prenomLabel, numeroLabel, nomInput, prenomInput, numeroInput, boutonValidation, boutonSuppression } from "./form.js"
+// création de tableau
+
+let listeContact = [{
+    nom: "nom",
+    prenom: "prenom",
+    phone: "phone"
+}];
+
+// -------------------------------------------------------------------------------------------------------------
+
+// Ajout des contact
+export function addContact(contact, userArray) {
+=======
 
 import {
   nomInput,
@@ -23,10 +38,23 @@ export let listeContact = [
 // // Ajout des contact
 
   function addContact(contact, userArray) {
+>>>>>>> dev
     userArray.push(contact);
     return userArray;
 }
 
+<<<<<<< HEAD
+// créattion des contact à partir des inputs 
+export function createContactFromInputs() {
+    const nom = nomInput.value.trim();
+    const prenom = prenomInput.value.trim();
+    const phone = numeroInput.value.trim();
+    return {
+        nom: nom,
+        prenom: prenom,
+        phone: phone
+    };
+=======
 
 // créattion des contact à partir des inputs
 
@@ -39,18 +67,34 @@ export function createContactFromInputs() {
     prenom: prenom,
     phone: phone,
   };
+>>>>>>> dev
 }
 
 // une fois ajouter, les inputs ce vides
 export function clearInputs() {
+<<<<<<< HEAD
+    nomInput.value = "";
+    prenomInput.value = "";
+    numeroInput.value = "";
+=======
 
   nomInput.value = "";
   prenomInput.value = "";
   numeroInput.value = "";
+>>>>>>> dev
 }
 
 // ajout contact depuis le form
 export function addContactFromForm() {
+<<<<<<< HEAD
+    const newContact = createContactFromInputs();
+    if (newContact) {
+        addContact(newContact, listeContact);
+        clearInputs();
+        console.log("Contact ajouté:", newContact);
+        console.log("Liste actuelle:", listeContact);
+    }
+=======
   const newContact = createContactFromInputs();
   if (newContact) {
     addContact(newContact, listeContact);
@@ -58,10 +102,22 @@ export function addContactFromForm() {
     console.log("Contact ajouté:", newContact);
     console.log("Liste actuelle:", listeContact);
   }
+>>>>>>> dev
 }
 
 // suppression contact depuis le form
 export function deleteContactFromForm() {
+<<<<<<< HEAD
+    const contactToDelete = createContactFromInputs();
+    if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
+        deleteContact(listeContact, contactToDelete);
+        clearInputs();
+        console.log("Contact supprimé:", contactToDelete);
+        console.log("Liste actuelle:", listeContact);
+    } else {
+        console.log("Veuillez remplir tous les champs pour supprimer un contact");
+    }
+=======
 
   const contactToDelete = createContactFromInputs();
   if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
@@ -72,6 +128,7 @@ export function deleteContactFromForm() {
   } else {
     console.log("Veuillez remplir tous les champs pour supprimer un contact");
   }
+>>>>>>> dev
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -79,6 +136,29 @@ export function deleteContactFromForm() {
 // Supprimer des contacts
 
 export function deleteContact(userArray, contact) {
+<<<<<<< HEAD
+    for (let i = 0; i < userArray.length; i++) {
+        if (userArray[i].nom === contact.nom &&
+            userArray[i].prenom === contact.prenom &&
+            userArray[i].phone === contact.phone) {
+            userArray.splice(i, 1);
+            break;
+        }
+    }
+    return userArray;
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+boutonValidation.addEventListener("click", addContactFromForm);
+boutonSuppression.addEventListener("click", deleteContactFromForm);
+
+// -------------------------------------------------------------------------------------------------------------
+
+// Test des function
+
+
+=======
 
   for (let i = 0; i < userArray.length; i++) {
     if (
@@ -94,3 +174,4 @@ export function deleteContact(userArray, contact) {
 }
 // -------------------------------------------------------------------------------------------------------------
 
+>>>>>>> dev
