@@ -1,3 +1,4 @@
+
 import { listeContact } from "./script.js";
 import { divFormCreateUser } from "./form.js";
 
@@ -14,9 +15,11 @@ export function mainPage() {
 
   userMainDiv.classList.add("mainDiv");
   sectionUserList.classList.add("sectionCards");
+
   actualisationBtn.id = "actBtn";
   addUser.id = "addUserBtn";
   contactCounter.id = "contactCounter";
+
 
   document.body.appendChild(sectionMain);
   sectionMain.appendChild(titleContact);

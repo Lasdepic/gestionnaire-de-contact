@@ -1,6 +1,7 @@
 // -------------------------------------------------------------------------------------------------------------
 // import de la page form
 
+
 import {
   nomInput,
   prenomInput,
@@ -20,10 +21,12 @@ export let listeContact = [
 // -------------------------------------------------------------------------------------------------------------
 
 // // Ajout des contact
+
 export function addContact(contact, userArray) {
     userArray.push(contact);
     return userArray;
 }
+
 
 // créattion des contact à partir des inputs
 export function createContactFromInputs() {
@@ -39,6 +42,7 @@ export function createContactFromInputs() {
 
 // une fois ajouter, les inputs ce vides
 export function clearInputs() {
+
   nomInput.value = "";
   prenomInput.value = "";
   numeroInput.value = "";
@@ -46,6 +50,7 @@ export function clearInputs() {
 
 // ajout contact depuis le form
 export function addContactFromForm() {
+
   const newContact = createContactFromInputs();
   if (newContact) {
     addContact(newContact, listeContact);
@@ -57,6 +62,7 @@ export function addContactFromForm() {
 
 // suppression contact depuis le form
 export function deleteContactFromForm() {
+
   const contactToDelete = createContactFromInputs();
   if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
     deleteContact(listeContact, contactToDelete);
@@ -73,6 +79,7 @@ export function deleteContactFromForm() {
 // Supprimer des contacts
 
 export function deleteContact(userArray, contact) {
+
   for (let i = 0; i < userArray.length; i++) {
     if (
       userArray[i].nom === contact.nom &&
@@ -85,11 +92,5 @@ export function deleteContact(userArray, contact) {
   }
   return userArray;
 }
-
 // -------------------------------------------------------------------------------------------------------------
 
-
-
-// -------------------------------------------------------------------------------------------------------------
-
-// Test des function

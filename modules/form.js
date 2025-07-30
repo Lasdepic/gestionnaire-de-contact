@@ -1,3 +1,4 @@
+
 import { addContactFromForm } from "./script.js";
 import { mainPage } from "./app.js";
 export let nomInput, prenomInput, numeroInput, divFormCreateUser;
@@ -57,3 +58,4 @@ export function addUserDiv() {
     document.body.removeChild(divFormCreateUser);
   })
 }
+
