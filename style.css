@@ -1,73 +1,180 @@
 :root {
-    --mainColor: #c45698;
+  --mainColor: #c45698;
 }
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #333;
-    color: var(--mainColor);
+  background-color: #333;
+  color: var(--mainColor);
+  height: 100vh;
+}
+
+body section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 body section .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+body section .mainDiv #actBtn {
+  width: 35px;
+  height: 25px;
+}
+
+body section .mainDiv #contactCounter {
+  bottom: 0;
+  position: absolute;
 }
 
 body section .mainDiv button {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: transparent;
-    color: var(--mainColor);
-    font-size: 18px;
-    border-radius: 15px;
-    border: solid var(--mainColor) 2px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  color: var(--mainColor);
+  font-size: 18px;
+  border-radius: 15px;
+  border: solid var(--mainColor) 2px;
+}
+
+body section #addUserBtn {
+  width: 35%;
+  height: 2rem;
+  justify-content: center;
 }
 
 body section .mainDiv section {
-    width: 90%;
-    height: 75%;
-    background-color: #474747c0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    gap: 1rem;
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    overflow: auto;
-    scrollbar-color: var(--mainColor) #333;
+  width: 90%;
+  height: 50%;
+  background-color: #474747c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+  gap: 0.5rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  overflow: auto;
+  scrollbar-color: var(--mainColor) #333;
 }
 
 body section .mainDiv section .divCard {
-    background-color: rgba(42, 42, 42, 0.667);
-    width: 95%;
-    border-radius: 15px;
-    border: solid var(--mainColor) 2px;
-    display: flex;
-    justify-content: space-between;
+  background-color: rgba(42, 42, 42, 0.667);
+  width: 95%;
+  border-radius: 15px;
+  border: solid var(--mainColor) 2px;
+  display: flex;
+  justify-content: space-between;
 }
 
 body section .mainDiv section .divCard p {
-    font-size: 14px;
-    padding-left: 1rem;
+  font-size: 14px;
+  padding-left: 1rem;
 }
 
 body section .mainDiv section .divCard .divBtnCard {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-right: 1rem;
-    gap: 0.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  gap: 0.5rem;
 }
 
 body section .mainDiv section .divCard .divBtnCard button {
-    border: none;
+  border: none;
+}
+
+body h2 {
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.divFormCreateUser {
+  padding: 20px;
+  margin: 50px;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #1d1d1df8;
+  border-radius: 15px;
+  position: absolute;
+  top: 15vh;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.divFormCreateUser #exitBtn {
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  border-radius: 50%;
+  border: solid var(--mainColor) 2px;
+}
+
+.divFormCreateUser label {
+  margin-top: 0.5rem;
+  padding-left: 50px;
+}
+.divFormCreateUser #btnValidation {
+  width: 50%;
+  height: 2rem;
+  margin: 10px;
+  background-color: transparent;
+  border: solid var(--mainColor) 2px;
+  color: aliceblue;
+  border-radius: 15px;
+  margin: 2rem auto;
+}
+
+.divFormCreateUser input {
+  width: 70%;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: none;
+  background-color: #333;
+  padding-left: 1rem;
+  color: aliceblue;
+}
+
+.divFormCreateUser h3 {
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+#divContactText {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5rem;
+  gap: 0.5rem;
+}
+
+#actBtn {
+  margin-top: 5vh;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
