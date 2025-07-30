@@ -1,3 +1,3 @@
-import {} from "./modules.app.js"
-import {} from "./modules.form.js"
-import {} from "./modules.script.js"
+import { mainPage } from "./modules/app.js";
+
+mainPage();
