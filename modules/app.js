@@ -61,7 +61,6 @@ usersCount = 0;
     const telContact = document.createElement("p");
     const divContactText = document.createElement("div");
     const divContactBtn = document.createElement("div");
-    const modifyContactBtn = document.createElement("button");
     const deleteContactBtn = document.createElement("button");
 
     divContactList.classList.add("divCard");
@@ -72,20 +71,15 @@ usersCount = 0;
     sectionUserList.appendChild(divContactList);
     divContactList.append(divContactText, divContactBtn);
     divContactText.append(nomContact, telContact);
-    divContactBtn.append(modifyContactBtn, deleteContactBtn);
+    divContactBtn.append(deleteContactBtn);
 
     nomContact.textContent = `- ${element.nom.toUpperCase()} ${element.prenom}`;
     telContact.textContent = `- ${element.phone}`;
-    modifyContactBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m490-527 37 37 217-217-37-37-217 217ZM200-200h37l233-233-37-37-233 233v37Zm355-205L405-555l167-167-29-29-219 219-56-56 218-219q24-24 56.5-24t56.5 24l29 29 50-50q12-12 28.5-12t28.5 12l93 93q12 12 12 28.5T828-678L555-405ZM270-120H120v-150l285-285 150 150-285 285Z"/></svg>`;
     deleteContactBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m376-300 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 180q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520Zm-400 0v520-520Z"/></svg>`;
 
     deleteContactBtn.addEventListener('click', () =>{
       deleteContact(listeContact, element);
       listActualisation();
-    })
-
-    modifyContactBtn.addEventListener('click', () =>{
-      editUser();
     })
   });
 }
