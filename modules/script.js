@@ -1,5 +1,6 @@
 // -------------------------------------------------------------------------------------------------------------
 // import de la page form
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { nomLabel, prenomLabel, numeroLabel, nomInput, prenomInput, numeroInput, boutonValidation, boutonSuppression } from "./form.js"
@@ -16,6 +17,9 @@ let listeContact = [{
 // Ajout des contact
 export function addContact(contact, userArray) {
 =======
+=======
+ import {usersCount} from "./app.js"
+>>>>>>> dev
 
 import {
   nomInput,
@@ -123,6 +127,7 @@ export function deleteContactFromForm() {
   if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
     deleteContact(listeContact, contactToDelete);
     clearInputs();
+    usersCount--;
     console.log("Contact supprimé:", contactToDelete);
     console.log("Liste actuelle:", listeContact);
   } else {
@@ -130,8 +135,6 @@ export function deleteContactFromForm() {
   }
 >>>>>>> dev
 }
-
-// -------------------------------------------------------------------------------------------------------------
 
 // Supprimer des contacts
 
@@ -172,6 +175,7 @@ boutonSuppression.addEventListener("click", deleteContactFromForm);
   }
   return userArray;
 }
+
 // -------------------------------------------------------------------------------------------------------------
 
 >>>>>>> dev
