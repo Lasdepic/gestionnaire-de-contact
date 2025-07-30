@@ -22,13 +22,14 @@ export let listeContact = [
 
 // // Ajout des contact
 
-export function addContact(contact, userArray) {
+  function addContact(contact, userArray) {
     userArray.push(contact);
     return userArray;
 }
 
 
 // créattion des contact à partir des inputs
+
 export function createContactFromInputs() {
   const nom = nomInput.value.trim();
   const prenom = prenomInput.value.trim();
@@ -50,7 +51,6 @@ export function clearInputs() {
 
 // ajout contact depuis le form
 export function addContactFromForm() {
-
   const newContact = createContactFromInputs();
   if (newContact) {
     addContact(newContact, listeContact);
