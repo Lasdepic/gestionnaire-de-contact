@@ -1,6 +1,6 @@
-import { mainPage } from "./modules/app.js";
-import { divForm } from "./modules/form.js";
+import { mainPage} from "./modules/app.js";
+import { addUserDiv} from "./modules/form.js";
 
 
 mainPage();
-divForm();
+addUserDiv();
