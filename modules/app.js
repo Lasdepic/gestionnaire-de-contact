@@ -1,3 +1,4 @@
+import {listeContact} from "./script.js"
 export function mainPage() {
   const sectionMain = document.createElement("section");
   const titleContact = document.createElement("h2");
@@ -10,6 +11,7 @@ export function mainPage() {
 
   userMainDiv.classList.add("mainDiv");
   sectionUserList.classList.add("sectionCards");
+  addUser.id = "createUserBtn";
 
   document.body.appendChild(sectionMain);
   sectionMain.appendChild(userMainDiv);
@@ -24,51 +26,13 @@ export function mainPage() {
 
   let usersCount = 0;
 
-  let arrayTestUsers = [
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-    {
-      nom: "Feur",
-      prenom: "Jordan",
-      tel: 1234567891,
-    },
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-    {
-      nom: "Deafiaa",
-      prenom: "Carla",
-      tel: 432143122,
-    },
-  ];
-
   titleContact.textContent = "Your Contacts";
   userIcons.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="75px" viewBox="0 -960 960 960" width="75px" fill="#e3e3e3"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>`;
   userListP.textContent = "User list empty";
   addUser.innerHTML = `Add user <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>`;
   contactCounter.innerHTML = `Vous avez ${usersCount} contacts`;
 
-  arrayTestUsers.forEach((element) => {
+  listeContact.forEach((element) => {
     const divContactList = document.createElement("div");
     const nomContact = document.createElement("p");
     const telContact = document.createElement("p");

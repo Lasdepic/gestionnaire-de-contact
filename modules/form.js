@@ -1,4 +1,5 @@
-const container = document.createElement("div");
+export function divForm(){
+    const container = document.createElement("div");
 document.body.appendChild(container);
 
 const nomLabel = document.createElement("label");
@@ -22,3 +23,5 @@ container.appendChild(numeroInput);
 const boutonValidation = document.createElement("button");
 boutonValidation.textContent = "Valider";
 container.appendChild(boutonValidation);
+
+}
