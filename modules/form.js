@@ -1,6 +1,6 @@
 
 import { addContactFromForm } from "./script.js";
-import { mainPage } from "./app.js";
+import { mainPage, usersCount } from "./app.js";
 export let nomInput, prenomInput, numeroInput, divFormCreateUser;
 
 export function addUserDiv() {

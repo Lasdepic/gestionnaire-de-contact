@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------------------------------------------------
 // import de la page form
-
+ import {usersCount} from "./app.js"
 
 import {
   nomInput,
@@ -67,14 +67,13 @@ export function deleteContactFromForm() {
   if (contactToDelete.nom && contactToDelete.prenom && contactToDelete.phone) {
     deleteContact(listeContact, contactToDelete);
     clearInputs();
+    usersCount--;
     console.log("Contact supprimé:", contactToDelete);
     console.log("Liste actuelle:", listeContact);
   } else {
     console.log("Veuillez remplir tous les champs pour supprimer un contact");
   }
 }
-
-// -------------------------------------------------------------------------------------------------------------
 
 // Supprimer des contacts
 
@@ -92,5 +91,6 @@ export function deleteContact(userArray, contact) {
   }
   return userArray;
 }
+
 // -------------------------------------------------------------------------------------------------------------
 
