@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {} from "./modules/app.js"
 import {} from "./modules/form.js"
 import {} from "./modules/script.js"
@@ -29,3 +30,11 @@ deleteContact(listeContact, {
     prenom: "Jordan",
     phone: "0613947403"
 });
+=======
+import { mainPage} from "./modules/app.js";
+import { addUserDiv} from "./modules/form.js";
+
+
+mainPage();
+addUserDiv();
+>>>>>>> dev
