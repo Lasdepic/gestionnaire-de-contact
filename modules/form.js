@@ -2,6 +2,8 @@
 import { addContactFromForm } from "./script.js";
 export let nomInput, prenomInput, numeroInput, divFormCreateUser;
 
+// fonction principal de la popup adduser
+
 export function addUserDiv() {
   divFormCreateUser = document.createElement("div");
   divFormCreateUser.classList.add("divFormCreateUser");

@@ -3,7 +3,12 @@ import { listeContact, deleteContact} from "./script.js";
 import { divFormCreateUser } from "./form.js";
 export let usersCount = 0;
 
+// fonction principal de la page
+
 export function mainPage() {
+
+  //declaration des variables
+
   const sectionMain = document.createElement("section");
   const titleContact = document.createElement("h2");
   const userIcons = document.createElement("h3");
@@ -21,6 +26,7 @@ export function mainPage() {
   addUser.id = "addUserBtn";
   contactCounter.id = "contactCounter";
 
+// assign child for diaplay
 
   document.body.appendChild(sectionMain);
   sectionMain.appendChild(titleContact);
@@ -60,9 +66,15 @@ svgRefresh.addEventListener('animationend', () => {
     svgRefresh.classList.remove('spin');
   }, { once: true });
 
+// foreach element from arrray of script.js
+
   listeContact.forEach((element) => {
     usersCount++;
+
+    // mise a jour de la variable userCount
     contactCounter.innerHTML = `Vous avez ${usersCount} contacts`;
+
+    // declaration variable cards
     const divContactList = document.createElement("div");
     const nomContact = document.createElement("p");
     const telContact = document.createElement("p");
@@ -72,6 +84,8 @@ svgRefresh.addEventListener('animationend', () => {
     const profilePictures = document.createElement("img");
     const divPpText = document.createElement("div");
 
+    // assign class | id | attribute
+
     divContactList.classList.add("divCard");
     divContactBtn.classList.add("divBtnCard");
     profilePictures.classList.add("ppImg");
@@ -79,15 +93,29 @@ svgRefresh.addEventListener('animationend', () => {
 
     divContactText.id = "divContactText";
 
+    // assign child for display cards
+
     sectionUserList.appendChild(divContactList);
     divContactList.append(divPpText, divContactBtn);
     divPpText.append(profilePictures, divContactText);
     divContactText.append(nomContact, telContact);
     divContactBtn.append(deleteContactBtn);
 
+    // Formating phone numbers TwT
+
+    function formatingPhoneNumber(number){
+      return number.match(/.{1,2}/g).join(".");
+    }
+
+    let numberFormat = formatingPhoneNumber(element.phone);
+    
+    // display texts contacts cards
+
     nomContact.textContent = `- ${element.nom.toUpperCase()} ${element.prenom}`;
-    telContact.textContent = `- ${element.phone}`;
+    telContact.textContent = `- ${numberFormat}`;
     deleteContactBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#8e8e8eff"><path d="m376-300 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 180q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520Zm-400 0v520-520Z"/></svg>`;
+
+    // delete features
 
     deleteContactBtn.addEventListener('click', () =>{
       deleteContact(listeContact, element);

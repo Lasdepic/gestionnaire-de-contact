@@ -60,6 +60,7 @@ body section .mainDiv button {
 
 body section #addUserBtn {
   width: 35%;
+  min-width: 130px;
   height: 2rem;
   justify-content: center;
 }
@@ -67,7 +68,7 @@ body section #addUserBtn {
 body section .mainDiv section {
   width: 90%;
   height: 50%;
-  background-color: #2525255f;
+  background-color: #25252544;
   display: flex;
   flex-direction: column;
   align-items: center;
