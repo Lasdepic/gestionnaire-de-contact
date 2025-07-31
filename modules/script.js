@@ -14,23 +14,23 @@ export let listeContact = [
   {
     nom: "Deafiaa",
     prenom: "Carla",
-    phone: 90291,
+    phone: "0929090291",
   },
   {
     nom: "Clément",
     prenom: "Jordan",
-    phone: 34070,
+    phone: "0734034070",
   },
   {
     nom: "Bali",
     prenom: "Eszter",
-    phone: 34000,
+    phone: "0629979245",
   },
 ];
 
 // -------------------------------------------------------------------------------------------------------------
 
-// // Ajout des contact
+// Ajout des contact
 
   function addContact(contact, userArray) {
     userArray.push(contact);
